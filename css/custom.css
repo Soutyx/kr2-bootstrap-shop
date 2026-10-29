@@ -1,16 +1,137 @@
+/* Общее оформление. Сетка и компоненты — Bootstrap. */
+:root {
+  --club-bg: #030305;
+  --club-surface: #111116;
+  --club-red: #ff003c;
+  --club-gold: #d4af37;
+}
+
 body {
+  font-family: "Manrope", sans-serif;
   min-height: 100vh;
+  background: var(--club-bg);
+  color: #fff;
+  --bs-secondary-color: #b4b4c0;
+  --bs-link-color: #e6c86e;
+  --bs-link-hover-color: #fff;
+  --bs-link-color-rgb: 230, 200, 110;
+  --bs-link-hover-color-rgb: 255, 255, 255;
 }
 
-.placeholder-box {
-  min-height: 240px;
+header, footer { background: #0a0a0f; }
+.navbar-brand { font-size: 1.15rem; }
+.navbar .nav-link.active { color: #fff; }
+.navbar .nav-link { color: #b4b4c0; }
+.navbar .nav-link:hover { color: #fff; }
+.btn { font-weight: 600; }
+.btn-danger {
+  --bs-btn-bg: #db0034;
+  --bs-btn-border-color: #db0034;
+  --bs-btn-hover-bg: #cf0032;
+  --bs-btn-hover-border-color: #cf0032;
+  --bs-btn-active-bg: #b3002d;
+  --bs-btn-active-border-color: #b3002d;
+}
+.text-danger { color: var(--club-red) !important; }
+.hero { min-height: 690px; }
+.hero-copy { max-width: 780px; }
+.hero h1 { position: relative; font-size: clamp(1.7rem, 4.4vw, 3.8rem); line-height: 1.2; letter-spacing: -.04em; }
+.hero-accent { color: #ff315f; }
+.hero-copy { position: relative; isolation: isolate; }
+.hero-copy::before {
+  content: "";
+  position: absolute;
+  inset: -55px -20px 15%;
+  z-index: -1;
+  pointer-events: none;
+  background: radial-gradient(ellipse, rgba(255, 0, 60, .2), transparent 68%);
+  filter: blur(22px);
+  animation: glow-in 1.4s ease-out both;
+}
+.hero .lead { max-width: 620px; margin-inline: auto; color: #c6c6d0; }
+.hero .container { z-index: 1; }
+.hero-mask { position: absolute; width: 33%; max-width: 500px; opacity: .5; pointer-events: none; }
+.mask-left { top: 0; left: -9%; transform: rotate(-18deg); }
+.mask-right { bottom: -4%; right: -9%; transform: rotate(16deg); }
+.section-space { padding-block: 64px; }
+.page-heading { padding: 80px 0 55px; }
+.card, .club-panel, .modal-content { background: var(--club-surface); }
+.card { border: 0; border-radius: 12px; }
+.club-panel { border-radius: 12px; }
+.price, .stars { color: var(--club-gold); }
+.text-link { text-decoration: none; }
+.gallery-photo { height: 470px; object-fit: cover; }
+.carousel-caption { bottom: 3rem; color: #fff; background: rgba(0, 0, 0, .8); padding: 12px; border-radius: 6px; }
+.carousel-caption p { margin: 0; }
+#clubGallery .carousel-control-prev-icon, #clubGallery .carousel-control-next-icon { filter: none; }
+.carousel-control-prev, .carousel-control-next { opacity: 1; }
+.carousel-control-prev-icon, .carousel-control-next-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: rgba(10, 10, 15, .85);
+  background-size: 45%;
+  transition: background-color .2s ease, transform .2s ease;
+}
+.carousel-control-prev:hover .carousel-control-prev-icon,
+.carousel-control-next:hover .carousel-control-next-icon { background-color: #db0034; transform: scale(1.06); }
+.carousel-indicators [data-bs-target] { background-color: #fff; }
+.accordion { --bs-accordion-bg: var(--club-surface); --bs-accordion-border-color: #2d2d36; --bs-accordion-active-bg: #261219; --bs-accordion-active-color: #fff; }
+.accordion-button { font-weight: 600; }
+.nav-pills { --bs-nav-pills-link-active-bg: var(--club-red); --bs-nav-link-color: #fff; --bs-nav-link-hover-color: #e6c86e; }
+.nav-pills .nav-link { background: var(--club-surface); }
+.nav-pills .nav-link.active { background: var(--club-red); }
+.table { --bs-table-bg: transparent; }
+footer a { text-decoration: none; }
+.demo-result { display: none; scroll-margin-top: 100px; }
+.demo-result:target { display: block; }
+section[id] { scroll-margin-top: 90px; }
+
+/* Модальное окно записи */
+.booking-modal .modal-dialog { --bs-modal-width: 960px; }
+.booking-summary { background: #1b1b23; border-radius: 8px; }
+.booking-summary dt { color: #b4b4c0; font-size: .8rem; font-weight: 400; }
+.booking-summary dd { margin-bottom: 16px; }
+.booking-modal .modal-header { border-bottom-color: #2d2d36; }
+.booking-modal .modal-title { font-weight: 700; }
+
+/* Небольшие анимации без JavaScript */
+.hero-copy, .page-heading .container { animation: fade-up .6s ease-out both; }
+.hero-mask { animation: mask-float 7s ease-in-out infinite alternate; }
+.mask-right { animation-delay: -3s; }
+.card { transition: transform .25s ease, background-color .25s ease; }
+.card:hover { transform: translateY(-4px); background-color: #191920; }
+.btn { transition: transform .2s ease, background-color .2s ease, border-color .2s ease; }
+.btn:hover { transform: translateY(-2px); }
+.btn:active { transform: translateY(0); }
+.nav-link, footer a { transition: color .2s ease; }
+.gallery-photo { transition: transform .5s ease; }
+.carousel-item.active:hover .gallery-photo { transform: scale(1.02); }
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes glow-in {
+  from { opacity: 0; transform: scale(.85); }
+  to { opacity: 1; transform: scale(1); }
+}
+@keyframes mask-float {
+  from { translate: 0 0; }
+  to { translate: 0 -12px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
 }
 
-.placeholder-image {
-  min-height: 320px;
-}
-
-.card-img-top {
-  height: 180px;
-  object-fit: cover;
+@media (max-width: 767.98px) {
+  .container { padding-inline: 24px; }
+  .hero { min-height: 580px; }
+  .hero-mask { width: 65%; opacity: .2; }
+  .mask-left { top: -6%; left: -28%; }
+  .mask-right { bottom: -5%; right: -28%; }
+  .hero .lead { font-size: 1.05rem; }
+  .section-space { padding-block: 40px; }
+  .page-heading { padding: 48px 0 36px; }
+  .gallery-photo { height: 320px; }
+  .carousel-caption p { font-size: 1rem; }
 }

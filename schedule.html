@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html lang="ru" data-bs-theme="dark">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Тайный круг — учебный сайт клуба игры Мафия. Правила, отзывы, расписание и демонстрационная запись на игры.">
+    <title>
+      Расписание — Тайный круг
+    </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+  </head>
+  <body>
+    <a class="visually-hidden-focusable btn btn-danger position-absolute" href="#main">
+      Перейти к содержимому
+    </a>
+    <header class="sticky-top">
+      <nav class="navbar navbar-expand-lg py-3" aria-label="Основная навигация">
+        <div class="container">
+          <a class="navbar-brand fw-bold" href="index.html">
+            ТАЙНЫЙ КРУГ
+            <span class="text-danger">
+              .
+            </span>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Открыть меню">
+            <span class="navbar-toggler-icon">
+            </span>
+          </button>
+          <div class="collapse navbar-collapse" id="mainNavbar">
+            <ul class="navbar-nav mx-auto gap-lg-3">
+              <li class="nav-item">
+                <a class="nav-link"  href="index.html">
+                  Главная
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link"  href="reviews.html">
+                  Отзывы
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link"  href="rules.html">
+                  Правила
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="schedule.html">
+                  Расписание
+                </a>
+              </li>
+            </ul>
+            <a class="btn btn-danger mt-3 mt-lg-0" href="schedule.html">
+              Выбрать игру →
+            </a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main id="main">
+      <section class="page-heading">
+        <div class="container">
+          <h1 class="display-4 fw-bold">
+            Выбери свой вечер
+          </h1>
+          <p class="lead mt-4 mb-0">
+            Мафия, блеф и новые знакомства. Осталось выбрать дату.
+          </p>
+        </div>
+      </section>
+      <section class="pb-5">
+        <div class="container">
+          <div id="booking-demo" class="alert alert-success demo-result mb-4" role="status">
+            <h2 class="h5">
+              Форма заполнена
+            </h2>
+          </div>
+          <h2 class="h3 mb-4">
+            Расписание игр
+          </h2>
+          <p class="text-body-secondary">
+            Игровые вечера: 30 октября — 1 ноября 2026 года.
+          </p>
+          <ul class="nav nav-pills gap-2 mb-4" id="scheduleTabs" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="friday-tab" data-bs-toggle="pill" data-bs-target="#friday" type="button" role="tab" aria-controls="friday" aria-selected="true">
+                30 октября · пт
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="saturday-tab" data-bs-toggle="pill" data-bs-target="#saturday" type="button" role="tab" aria-controls="saturday" aria-selected="false">
+                31 октября · сб
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="sunday-tab" data-bs-toggle="pill" data-bs-target="#sunday" type="button" role="tab" aria-controls="sunday" aria-selected="false">
+                1 ноября · вс
+              </button>
+            </li>
+          </ul>
+          <div class="tab-content">
+            <div class="tab-pane fade show active" id="friday" role="tabpanel" aria-labelledby="friday-tab" tabindex="0">
+              <div class="row g-4">
+                <div class="col-md-6 col-xl-4">
+                  <article class="card h-100">
+                    <div class="card-body p-4 d-flex flex-column">
+                      <div class="d-flex justify-content-between align-items-start gap-2 mb-4">
+                        <p class="mb-0">
+                          Пятница
+                          <br>
+                          <strong>
+                            30 октября
+                          </strong>
+                        </p>
+                        <span class="badge text-bg-dark">
+                          Мест: 4
+                        </span>
+                      </div>
+                      <p class="text-body-secondary mb-2">
+                        19:00 · Ведущий Север
+                      </p>
+                      <h3 class="h4 fw-bold">
+                        Городская мафия
+                      </h3>
+                      <p class="text-body-secondary">
+                        Классическая турнирная мафия с авторскими масками и профессиональным ведущим.
+                      </p>
+                      <p class="small text-body-secondary">
+                        Зал «Полночь» · ул. Примерная, 10
+                      </p>
+                      <div class="d-flex align-items-center justify-content-between gap-2 mt-auto pt-3">
+                        <span class="h4 mb-0 price">
+                          1 200 ₽
+                        </span>
+                        <button class="btn btn-danger" type="button" data-bs-toggle="modal" data-bs-target="#booking1">
+                          Записаться
+                        </button>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+                <div class="col-md-6 col-xl-4">
+                  <article class="card h-100">
+                    <div class="card-body p-4 d-flex flex-column">
+                      <div class="d-flex justify-content-between align-items-start gap-2 mb-4">
+                        <p class="mb-0">
+                          Пятница
+                          <br>
+                          <strong>
+                            30 октября
+                          </strong>
+                        </p>
+                        <span class="badge text-bg-dark">
+                          Мест: 5
+                        </span>
+                      </div>
+                      <p class="text-body-secondary mb-2">
+                        22:00 · Ведущий Тень
+                      </p>
+                      <h3 class="h4 fw-bold">
+                        Ночная мафия
+                      </h3>
+                      <p class="text-body-secondary">
+                        Пятничный вечер игр высокой интенсивности. Жесткий блеф и разборы.
+                      </p>
+                      <p class="small text-body-secondary">
+                        Зал «Полночь» · ул. Примерная, 10
+                      </p>
+                      <div class="d-flex align-items-center justify-content-between gap-2 mt-auto pt-3">
+                        <span class="h4 mb-0 price">
+                          1 500 ₽
+                        </span>
+                        <button class="btn btn-danger" type="button" data-bs-toggle="modal" data-bs-target="#booking2">
+                          Записаться
+                        </button>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="saturday" role="tabpanel" aria-labelledby="saturday-tab" tabindex="0">
+              <div class="row g-4">
+                <div class="col-md-6 col-xl-4">
+                  <article class="card h-100">
+                    <div class="card-body p-4 d-flex flex-column">
+                      <div class="d-flex justify-content-between align-items-start gap-2 mb-4">
+                        <p class="mb-0">
+                          Суббота
+                          <br>
+                          <strong>
+                            31 октября
+                          </strong>
+                        </p>
+                        <span class="badge text-bg-dark">
+                          Мест: 3
+                        </span>
+                      </div>
+                      <p class="text-body-secondary mb-2">
+                        17:00 · Ведущий Туз
+                      </p>
+                      <h3 class="h4 fw-bold">
+                        Спортивный покер
+                      </h3>
+                      <p class="text-body-secondary">
+                        Клубный турнир на фишки. Обучение новичков перед стартом.
+                      </p>
+                      <p class="small text-body-secondary">
+                        Зал «Полночь» · ул. Примерная, 10
+                      </p>
+                      <div class="d-flex align-items-center justify-content-between gap-2 mt-auto pt-3">
+                        <span class="h4 mb-0 price">
+                          1 200 ₽
+                        </span>
+                        <button class="btn btn-danger" type="button" data-bs-toggle="modal" data-bs-target="#booking3">
+                          Записаться
+                        </button>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+                <div class="col-md-6 col-xl-4">
+                  <article class="card h-100">
+                    <div class="card-body p-4 d-flex flex-column">
+                      <div class="d-flex justify-content-between align-items-start gap-2 mb-4">
+                        <p class="mb-0">
+                          Суббота
+                          <br>
+                          <strong>
+                            31 октября
+                          </strong>
+                        </p>
+                        <span class="badge text-bg-dark">
+                          Мест: 1
+                        </span>
+                      </div>
+                      <p class="text-body-secondary mb-2">
+                        20:30 · Ведущий Север
+                      </p>
+                      <h3 class="h4 fw-bold">
+                        Городская мафия
+                      </h3>
+                      <p class="text-body-secondary">
+                        Субботний мейн-ивент. Авторский реквизит и фотографии.
+                      </p>
+                      <p class="small text-body-secondary">
+                        Зал «Полночь» · ул. Примерная, 10
+                      </p>
+                      <div class="d-flex align-items-center justify-content-between gap-2 mt-auto pt-3">
+                        <span class="h4 mb-0 price">
+                          1 200 ₽
+                        </span>
+                        <button class="btn btn-danger" type="button" data-bs-toggle="modal" data-bs-target="#booking4">
+                          Записаться
+                        </button>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="sunday" role="tabpanel" aria-labelledby="sunday-tab" tabindex="0">
+              <div class="row g-4">
+                <div class="col-md-6 col-xl-4">
+                  <article class="card h-100">
+                    <div class="card-body p-4 d-flex flex-column">
+                      <div class="d-flex justify-content-between align-items-start gap-2 mb-4">
+                        <p class="mb-0">
+                          Воскресенье
+                          <br>
+                          <strong>
+                            1 ноября
+                          </strong>
+                        </p>
+                        <span class="badge text-bg-dark">
+                          Мест: 2
+                        </span>
+                      </div>
+                      <p class="text-body-secondary mb-2">
+                        16:00 · Ведущий Лис
+                      </p>
+                      <h3 class="h4 fw-bold">
+                        Нечто (The Thing)
+                      </h3>
+                      <p class="text-body-secondary">
+                        Атмосферный хоррор-детектив на скрытые роли и выживание команды.
+                      </p>
+                      <p class="small text-body-secondary">
+                        Зал «Полночь» · ул. Примерная, 10
+                      </p>
+                      <div class="d-flex align-items-center justify-content-between gap-2 mt-auto pt-3">
+                        <span class="h4 mb-0 price">
+                          1 200 ₽
+                        </span>
+                        <button class="btn btn-danger" type="button" data-bs-toggle="modal" data-bs-target="#booking5">
+                          Записаться
+                        </button>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+                <div class="col-md-6 col-xl-4">
+                  <article class="card h-100">
+                    <div class="card-body p-4 d-flex flex-column">
+                      <div class="d-flex justify-content-between align-items-start gap-2 mb-4">
+                        <p class="mb-0">
+                          Воскресенье
+                          <br>
+                          <strong>
+                            1 ноября
+                          </strong>
+                        </p>
+                        <span class="badge text-bg-dark">
+                          Мест: 6
+                        </span>
+                      </div>
+                      <p class="text-body-secondary mb-2">
+                        18:00 · Ведущий Лис
+                      </p>
+                      <h3 class="h4 fw-bold">
+                        Городская мафия
+                      </h3>
+                      <p class="text-body-secondary">
+                        Завершающий вечер недели. Легкая и драйвовая атмосфера.
+                      </p>
+                      <p class="small text-body-secondary">
+                        Зал «Полночь» · ул. Примерная, 10
+                      </p>
+                      <div class="d-flex align-items-center justify-content-between gap-2 mt-auto pt-3">
+                        <span class="h4 mb-0 price">
+                          1 200 ₽
+                        </span>
+                        <button class="btn btn-danger" type="button" data-bs-toggle="modal" data-bs-target="#booking6">
+                          Записаться
+                        </button>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row g-4 mt-5">
+            <div class="col-md-6">
+              <div class="club-panel p-4 h-100">
+                <h2 class="h4">
+                  Подари эмоции и жёсткий блеф
+                </h2>
+                <p class="mb-0 text-body-secondary">
+                  Электронный или фирменный бумажный сертификат на любой игровой вечер в клубе «Тайный круг».
+                </p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="club-panel p-4 h-100">
+                <h2 class="h4">
+                  Приглашай друзей
+                </h2>
+                <p class="mb-0 text-body-secondary">
+                  Скидки
+                  <strong class="text-white">
+                    400 ₽
+                  </strong>
+                  вам и друзьям за каждого новичка или
+                  <strong class="text-white">
+                    бесплатный вечер за 3+ друзей
+                  </strong>
+                  !
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="py-5 mt-5">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-5">
+            <a class="h4 fw-bold text-decoration-none text-white" href="index.html">
+              ТАЙНЫЙ КРУГ.
+            </a>
+            <p class="text-body-secondary mt-3 mb-0">
+              Город засыпает. Просыпается мафия.
+              <br>
+              Клуб психологических игр в Москве.
+            </p>
+          </div>
+          <div class="col-sm-6 col-lg-3">
+            <p class="fw-bold">
+              Навигация
+            </p>
+            <ul class="list-unstyled mb-0">
+              <li class="mb-2">
+                <a href="index.html">
+                  Главная
+                </a>
+              </li>
+              <li class="mb-2">
+                <a href="reviews.html">
+                  Отзывы
+                </a>
+              </li>
+              <li class="mb-2">
+                <a href="rules.html">
+                  Правила
+                </a>
+              </li>
+              <li class="mb-2">
+                <a href="schedule.html">
+                  Расписание
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-sm-6 col-lg-4">
+            <p class="fw-bold">
+              Контакты
+            </p>
+            <p>
+              Москва, ул. Примерная, 10
+              <br>
+              Ежедневно, 16:00–23:00
+            </p>
+            <a href="mailto:hello@secret-circle.example">
+              hello@secret-circle.example
+            </a>
+            <p class="mt-2 mb-0">
+              +7 (000) 000-00-00
+            </p>
+          </div>
+        </div>
+        <div class="d-flex flex-column flex-md-row justify-content-between gap-2 mt-5 text-body-secondary small">
+          <p class="mb-0">
+            © 2026 * · Учебный проект
+          </p>
+        </div>
+      </div>
+    </footer>
+    <div class="modal fade booking-modal" id="booking1" tabindex="-1" aria-labelledby="bookingTitle1" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header px-4">
+            <h2 class="modal-title fs-5" id="bookingTitle1">Запись на игровой вечер</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+          </div>
+          <div class="modal-body p-4">
+            <div class="row g-4">
+              <div class="col-lg-4">
+                <div class="booking-summary p-3">
+                  <h3 class="h4 mb-3">Городская мафия</h3>
+                  <dl class="mb-3">
+                    <dt>Дата и время</dt><dd>30 октября 2026 · 19:00</dd>
+                    <dt>Ведущий</dt><dd>Север</dd>
+                    <dt>Место встречи</dt><dd>Зал «Полночь»<br>ул. Примерная, 10</dd>
+                    <dt>Свободные места</dt><dd class="mb-0">4</dd>
+                  </dl>
+                  <p class="price h3 mb-1">1 200 ₽</p>
+                  <p class="small text-body-secondary mb-0">За одного игрока · оплата на месте</p>
+                </div>
+              </div>
+              <div class="col-lg-8">
+                <form id="bookingForm1" action="schedule.html#booking-demo" method="get">
+                  <input type="hidden" name="game" value="1">
+                  <fieldset class="mb-4">
+                    <legend class="h5 mb-3">Контактные данные</legend>
+                    <div class="row g-3">
+                      <div class="col-sm-6">
+                        <label for="surname1" class="form-label">Фамилия *</label>
+                        <input id="surname1" class="form-control" name="surname" autocomplete="family-name" maxlength="60" placeholder="Ваша фамилия" minlength="2" pattern="\p{L}{2,}(?:[ \-]\p{L}+)*" title="Не менее двух букв. Можно использовать пробел и дефис, без цифр." required>
+                      </div>
+                      <div class="col-sm-6">
+                        <label for="name1" class="form-label">Имя *</label>
+                        <input id="name1" class="form-control" name="name" autocomplete="given-name" maxlength="60" placeholder="Ваше имя" minlength="2" pattern="\p{L}{2,}(?:[ \-]\p{L}+)*" title="Не менее двух букв. Можно использовать пробел и дефис, без цифр." required>
+                      </div>
+                      <div class="col-12">
+                        <label for="patronymic1" class="form-label">Отчество (при наличии)</label>
+                        <input id="patronymic1" class="form-control" name="patronymic" autocomplete="additional-name" maxlength="60" placeholder="Ваше отчество" minlength="2" pattern="\p{L}{2,}(?:[ \-]\p{L}+)*" title="Не менее двух букв, без цифр.">
+                      </div>
+                      <div class="col-sm-6">
+                        <label for="email1" class="form-label">Электронная почта *</label>
+                        <input id="email1" class="form-control" type="email" name="email" autocomplete="email" maxlength="100" placeholder="Ваша электронная почта" required>
+                      </div>
+                      <div class="col-sm-6">
+                        <label for="phone1" class="form-label">Телефон *</label>
+                        <input id="phone1" class="form-control" type="tel" name="phone" autocomplete="tel" placeholder="+7 (999) 123-45-67" pattern="[+0-9\s\(\)\-]{10,20}" required>
+                      </div>
+                    </div>
+                  </fieldset>
+                  <fieldset class="mb-4">
+                    <legend class="h5 mb-3">Участие в игре</legend>
+                    <div class="row g-3">
+                      <div class="col-sm-6">
+                        <label for="guests1" class="form-label">Количество игроков *</label>
+                        <input id="guests1" class="form-control" type="number" name="guests" min="1" max="4" value="1" required>
+                        <div class="form-text">Не более 4 чел.</div>
+                      </div>
+                      <div class="col-sm-6">
+                        <label for="experience1" class="form-label">Ваш опыт</label>
+                        <select id="experience1" class="form-select" name="experience">
+                          <option value="beginner">Играю впервые</option>
+                          <option value="some">Уже пробовал</option>
+                          <option value="regular">Играю регулярно</option>
+                        </select>
+                      </div>
+                      <div class="col-12">
+                        <label for="comment1" class="form-label">Комментарий</label>
+                        <textarea id="comment1" class="form-control" name="comment" rows="2" maxlength="500" placeholder="Например, играем впервые или придём компанией"></textarea>
+                      </div>
+                    </div>
+                  </fieldset>
+                  <div class="form-check mb-3">
+                    <input class="form-check-input" id="consent1" name="consent" value="yes" type="checkbox" required>
+                    <label class="form-check-label small" for="consent1">Согласен на обработку персональных данных для оформления записи. *</label>
+                  </div>
+                  <div class="form-check mb-4">
+                    <input class="form-check-input" id="newsletter1" name="newsletter" value="yes" type="checkbox">
+                    <label class="form-check-label small" for="newsletter1">Хочу получать новости клуба и расписание игр на почту.</label>
+                  </div>
+                  <p class="form-text">* Обязательные поля.</p>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer px-4">
+            <button class="btn btn-outline-light" type="button" data-bs-dismiss="modal">Отмена</button>
+            <button class="btn btn-danger" type="submit" form="bookingForm1">Подтвердить запись</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade booking-modal" id="booking2" tabindex="-1" aria-labelledby="bookingTitle2" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header px-4">
+            <h2 class="modal-title fs-5" id="bookingTitle2">Запись на игровой вечер</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+          </div>
+          <div class="modal-body p-4">
+            <div class="row g-4">
+              <div class="col-lg-4">
+                <div class="booking-summary p-3">
+                  <h3 class="h4 mb-3">Ночная мафия</h3>
+                  <dl class="mb-3">
+                    <dt>Дата и время</dt><dd>30 октября 2026 · 22:00</dd>
+                    <dt>Ведущий</dt><dd>Тень</dd>
+                    <dt>Место встречи</dt><dd>Зал «Полночь»<br>ул. Примерная, 10</dd>
+                    <dt>Свободные места</dt><dd class="mb-0">5</dd>
+                  </dl>
+                  <p class="price h3 mb-1">1 500 ₽</p>
+                  <p class="small text-body-secondary mb-0">За одного игрока · оплата на месте</p>
+                </div>
+              </div>
+              <div class="col-lg-8">
+                <form id="bookingForm2" action="schedule.html#booking-demo" method="get">
+                  <input type="hidden" name="game" value="2">
+                  <fieldset class="mb-4">
+                    <legend class="h5 mb-3">Контактные данные</legend>
+                    <div class="row g-3">
+                      <div class="col-sm-6">
+                        <label for="surname2" class="form-label">Фамилия *</label>
+                        <input id="surname2" class="form-control" name="surname" autocomplete="family-name" maxlength="60" placeholder="Ваша фамилия" minlength="2" pattern="\p{L}{2,}(?:[ \-]\p{L}+)*" title="Не менее двух букв. Можно использовать пробел и дефис, без цифр." required>
+                      </div>
+                      <div class="col-sm-6">
+                        <label for="name2" class="form-label">Имя *</label>
+                        <input id="name2" class="form-control" name="name" autocomplete="given-name" maxlength="60" placeholder="Ваше имя" minlength="2" pattern="\p{L}{2,}(?:[ \-]\p{L}+)*" title="Не менее двух букв. Можно использовать пробел и дефис, без цифр." required>
+                      </div>
+                      <div class="col-12">
+                        <label for="patronymic2" class="form-label">Отчество (при наличии)</label>
+                        <input id="patronymic2" class="form-control" name="patronymic" autocomplete="additional-name" maxlength="60" placeholder="Ваше отчество" minlength="2" pattern="\p{L}{2,}(?:[ \-]\p{L}+)*" title="Не менее двух букв, без цифр.">
+                      </div>
+                      <div class="col-sm-6">
+                        <label for="email2" class="form-label">Электронная почта *</label>
+                        <input id="email2" class="form-control" type="email" name="email" autocomplete="email" maxlength="100" placeholder="Ваша электронная почта" required>
+                      </div>
+                      <div class="col-sm-6">
+                        <label for="phone2" class="form-label">Телефон *</label>
+                        <input id="phone2" class="form-control" type="tel" name="phone" autocomplete="tel" placeholder="+7 (999) 123-45-67" pattern="[+0-9\s\(\)\-]{10,20}" required>
+                      </div>
+                    </div>
+                  </fieldset>
+                  <fieldset class="mb-4">
+                    <legend class="h5 mb-3">Участие в игре</legend>
+                    <div class="row g-3">
+                      <div class="col-sm-6">
+                        <label for="guests2" class="form-label">Количество игроков *</label>
+                        <input id="guests2" class="form-control" type="number" name="guests" min="1" max="5" value="1" required>
+                        <div class="form-text">Не более 5 чел.</div>
+                      </div>
+                      <div class="col-sm-6">
+                        <label for="experience2" class="form-label">Ваш опыт</label>
+                        <select id="experience2" class="form-select" name="experience">
+                          <option value="beginner">Играю впервые</option>
+                          <option value="some">Уже пробовал</option>
+                          <option value="regular">Играю регулярно</option>
+                        </select>
+                      </div>
+                      <div class="col-12">
+                        <label for="comment2" class="form-label">Комментарий</label>
+                        <textarea id="comment2" class="form-control" name="comment" rows="2" maxlength="500" placeholder="Например, играем впервые или придём компанией"></textarea>
+                      </div>
+                    </div>
+                  </fieldset>
+                  <div class="form-check mb-3">
+                    <input class="form-check-input" id="consent2" name="consent" value="yes" type="checkbox" required>
+                    <label class="form-check-label small" for="consent2">Согласен на обработку персональных данных для оформления записи. *</label>
+                  </div>
+                  <div class="form-check mb-4">
+                    <input class="form-check-input" id="newsletter2" name="newsletter" value="yes" type="checkbox">
+                    <label class="form-check-label small" for="newsletter2">Хочу получать новости клуба и расписание игр на почту.</label>
+                  </div>
+                  <p class="form-text">* Обязательные поля.</p>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer px-4">
+            <button class="btn btn-outline-light" type="button" data-bs-dismiss="modal">Отмена</button>
+            <button class="btn btn-danger" type="submit" form="bookingForm2">Подтвердить запись</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade booking-modal" id="booking3" tabindex="-1" aria-labelledby="bookingTitle3" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header px-4">
+            <h2 class="modal-title fs-5" id="bookingTitle3">Запись на игровой вечер</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+          </div>
+          <div class="modal-body p-4">
+            <div class="row g-4">
+              <div class="col-lg-4">
+                <div class="booking-summary p-3">
+                  <h3 class="h4 mb-3">Спортивный покер</h3>
+                  <dl class="mb-3">
+                    <dt>Дата и время</dt><dd>31 октября 2026 · 17:00</dd>
+                    <dt>Ведущий</dt><dd>Туз</dd>
+                    <dt>Место встречи</dt><dd>Зал «Полночь»<br>ул. Примерная, 10</dd>
+                    <dt>Свободные места</dt><dd class="mb-0">3</dd>
+                  </dl>
+                  <p class="price h3 mb-1">1 200 ₽</p>
+                  <p class="small text-body-secondary mb-0">За одного игрока · оплата на месте</p>
+                </div>
+              </div>
+              <div class="col-lg-8">
+                <form id="bookingForm3" action="schedule.html#booking-demo" method="get">
+                  <input type="hidden" name="game" value="3">
+                  <fieldset class="mb-4">
+                    <legend class="h5 mb-3">Контактные данные</legend>
+                    <div class="row g-3">
+                      <div class="col-sm-6">
+                        <label for="surname3" class="form-label">Фамилия *</label>
+                        <input id="surname3" class="form-control" name="surname" autocomplete="family-name" maxlength="60" placeholder="Ваша фамилия" minlength="2" pattern="\p{L}{2,}(?:[ \-]\p{L}+)*" title="Не менее двух букв. Можно использовать пробел и дефис, без цифр." required>
+                      </div>
+                      <div class="col-sm-6">
+                        <label for="name3" class="form-label">Имя *</label>
+                        <input id="name3" class="form-control" name="name" autocomplete="given-name" maxlength="60" placeholder="Ваше имя" minlength="2" pattern="\p{L}{2,}(?:[ \-]\p{L}+)*" title="Не менее двух букв. Можно использовать пробел и дефис, без цифр." required>
+                      </div>
+                      <div class="col-12">
+                        <label for="patronymic3" class="form-label">Отчество (при наличии)</label>
+                        <input id="patronymic3" class="form-control" name="patronymic" autocomplete="additional-name" maxlength="60" placeholder="Ваше отчество" minlength="2" pattern="\p{L}{2,}(?:[ \-]\p{L}+)*" title="Не менее двух букв, без цифр.">
+                      </div>
+                      <div class="col-sm-6">
+                        <label for="email3" class="form-label">Электронная почта *</label>
+                        <input id="email3" class="form-control" type="email" name="email" autocomplete="email" maxlength="100" placeholder="Ваша электронная почта" required>
+                      </div>
+                      <div class="col-sm-6">
+                        <label for="phone3" class="form-label">Телефон *</label>
+                        <input id="phone3" class="form-control" type="tel" name="phone" autocomplete="tel" placeholder="+7 (999) 123-45-67" pattern="[+0-9\s\(\)\-]{10,20}" required>
+                      </div>
+                    </div>
+                  </fieldset>
+                  <fieldset class="mb-4">
+                    <legend class="h5 mb-3">Участие в игре</legend>
+                    <div class="row g-3">
+                      <div class="col-sm-6">
+                        <label for="guests3" class="form-label">Количество игроков *</label>
+                        <input id="guests3" class="form-control" type="number" name="guests" min="1" max="3" value="1" required>
+                        <div class="form-text">Не более 3 чел.</div>
+                      </div>
+                      <div class="col-sm-6">
+                        <label for="experience3" class="form-label">Ваш опыт</label>
+                        <select id="experience3" class="form-select" name="experience">
+                          <option value="beginner">Играю впервые</option>
+                          <option value="some">Уже пробовал</option>
+                          <option value="regular">Играю регулярно</option>
+                        </select>
+                      </div>
+                      <div class="col-12">
+                        <label for="comment3" class="form-label">Комментарий</label>
+                        <textarea id="comment3" class="form-control" name="comment" rows="2" maxlength="500" placeholder="Например, играем впервые или придём компанией"></textarea>
+                      </div>
+                    </div>
+                  </fieldset>
+                  <div class="form-check mb-3">
+                    <input class="form-check-input" id="consent3" name="consent" value="yes" type="checkbox" required>
+                    <label class="form-check-label small" for="consent3">Согласен на обработку персональных данных для оформления записи. *</label>
+                  </div>
+                  <div class="form-check mb-4">
+                    <input class="form-check-input" id="newsletter3" name="newsletter" value="yes" type="checkbox">
+                    <label class="form-check-label small" for="newsletter3">Хочу получать новости клуба и расписание игр на почту.</label>
+                  </div>
+                  <p class="form-text">* Обязательные поля.</p>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer px-4">
+            <button class="btn btn-outline-light" type="button" data-bs-dismiss="modal">Отмена</button>
+            <button class="btn btn-danger" type="submit" form="bookingForm3">Подтвердить запись</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade booking-modal" id="booking4" tabindex="-1" aria-labelledby="bookingTitle4" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header px-4">
+            <h2 class="modal-title fs-5" id="bookingTitle4">Запись на игровой вечер</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+          </div>
+          <div class="modal-body p-4">
+            <div class="row g-4">
+              <div class="col-lg-4">
+                <div class="booking-summary p-3">
+                  <h3 class="h4 mb-3">Городская мафия</h3>
+                  <dl class="mb-3">
+                    <dt>Дата и время</dt><dd>31 октября 2026 · 20:30</dd>
+                    <dt>Ведущий</dt><dd>Север</dd>
+                    <dt>Место встречи</dt><dd>Зал «Полночь»<br>ул. Примерная, 10</dd>
+                    <dt>Свободные места</dt><dd class="mb-0">1</dd>
+                  </dl>
+                  <p class="price h3 mb-1">1 200 ₽</p>
+                  <p class="small text-body-secondary mb-0">За одного игрока · оплата на месте</p>
+                </div>
+              </div>
+              <div class="col-lg-8">
+                <form id="bookingForm4" action="schedule.html#booking-demo" method="get">
+                  <input type="hidden" name="game" value="4">
+                  <fieldset class="mb-4">
+                    <legend class="h5 mb-3">Контактные данные</legend>
+                    <div class="row g-3">
+                      <div class="col-sm-6">
+                        <label for="surname4" class="form-label">Фамилия *</label>
+                        <input id="surname4" class="form-control" name="surname" autocomplete="family-name" maxlength="60" placeholder="Ваша фамилия" minlength="2" pattern="\p{L}{2,}(?:[ \-]\p{L}+)*" title="Не менее двух букв. Можно использовать пробел и дефис, без цифр." required>
+                      </div>
+                      <div class="col-sm-6">
+                        <label for="name4" class="form-label">Имя *</label>
+                        <input id="name4" class="form-control" name="name" autocomplete="given-name" maxlength="60" placeholder="Ваше имя" minlength="2" pattern="\p{L}{2,}(?:[ \-]\p{L}+)*" title="Не менее двух букв. Можно использовать пробел и дефис, без цифр." required>
+                      </div>
+                      <div class="col-12">
+                        <label for="patronymic4" class="form-label">Отчество (при наличии)</label>
+                        <input id="patronymic4" class="form-control" name="patronymic" autocomplete="additional-name" maxlength="60" placeholder="Ваше отчество" minlength="2" pattern="\p{L}{2,}(?:[ \-]\p{L}+)*" title="Не менее двух букв, без цифр.">
+                      </div>
+                      <div class="col-sm-6">
+                        <label for="email4" class="form-label">Электронная почта *</label>
+                        <input id="email4" class="form-control" type="email" name="email" autocomplete="email" maxlength="100" placeholder="Ваша электронная почта" required>
+                      </div>
+                      <div class="col-sm-6">
+                        <label for="phone4" class="form-label">Телефон *</label>
+                        <input id="phone4" class="form-control" type="tel" name="phone" autocomplete="tel" placeholder="+7 (999) 123-45-67" pattern="[+0-9\s\(\)\-]{10,20}" required>
+                      </div>
+                    </div>
+                  </fieldset>
+                  <fieldset class="mb-4">
+                    <legend class="h5 mb-3">Участие в игре</legend>
+                    <div class="row g-3">
+                      <div class="col-sm-6">
+                        <label for="guests4" class="form-label">Количество игроков *</label>
+                        <input id="guests4" class="form-control" type="number" name="guests" min="1" max="1" value="1" required>
+                        <div class="form-text">Не более 1 чел.</div>
+                      </div>
+                      <div class="col-sm-6">
+                        <label for="experience4" class="form-label">Ваш опыт</label>
+                        <select id="experience4" class="form-select" name="experience">
+                          <option value="beginner">Играю впервые</option>
+                          <option value="some">Уже пробовал</option>
+                          <option value="regular">Играю регулярно</option>
+                        </select>
+                      </div>
+                      <div class="col-12">
+                        <label for="comment4" class="form-label">Комментарий</label>
+                        <textarea id="comment4" class="form-control" name="comment" rows="2" maxlength="500" placeholder="Например, играем впервые или придём компанией"></textarea>
+                      </div>
+                    </div>
+                  </fieldset>
+                  <div class="form-check mb-3">
+                    <input class="form-check-input" id="consent4" name="consent" value="yes" type="checkbox" required>
+                    <label class="form-check-label small" for="consent4">Согласен на обработку персональных данных для оформления записи. *</label>
+                  </div>
+                  <div class="form-check mb-4">
+                    <input class="form-check-input" id="newsletter4" name="newsletter" value="yes" type="checkbox">
+                    <label class="form-check-label small" for="newsletter4">Хочу получать новости клуба и расписание игр на почту.</label>
+                  </div>
+                  <p class="form-text">* Обязательные поля.</p>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer px-4">
+            <button class="btn btn-outline-light" type="button" data-bs-dismiss="modal">Отмена</button>
+            <button class="btn btn-danger" type="submit" form="bookingForm4">Подтвердить запись</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade booking-modal" id="booking5" tabindex="-1" aria-labelledby="bookingTitle5" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header px-4">
+            <h2 class="modal-title fs-5" id="bookingTitle5">Запись на игровой вечер</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+          </div>
+          <div class="modal-body p-4">
+            <div class="row g-4">
+              <div class="col-lg-4">
+                <div class="booking-summary p-3">
+                  <h3 class="h4 mb-3">Нечто (The Thing)</h3>
+                  <dl class="mb-3">
+                    <dt>Дата и время</dt><dd>1 ноября 2026 · 16:00</dd>
+                    <dt>Ведущий</dt><dd>Лис</dd>
+                    <dt>Место встречи</dt><dd>Зал «Полночь»<br>ул. Примерная, 10</dd>
+                    <dt>Свободные места</dt><dd class="mb-0">2</dd>
+                  </dl>
+                  <p class="price h3 mb-1">1 200 ₽</p>
+                  <p class="small text-body-secondary mb-0">За одного игрока · оплата на месте</p>
+                </div>
+              </div>
+              <div class="col-lg-8">
+                <form id="bookingForm5" action="schedule.html#booking-demo" method="get">
+                  <input type="hidden" name="game" value="5">
+                  <fieldset class="mb-4">
+                    <legend class="h5 mb-3">Контактные данные</legend>
+                    <div class="row g-3">
+                      <div class="col-sm-6">
+                        <label for="surname5" class="form-label">Фамилия *</label>
+                        <input id="surname5" class="form-control" name="surname" autocomplete="family-name" maxlength="60" placeholder="Ваша фамилия" minlength="2" pattern="\p{L}{2,}(?:[ \-]\p{L}+)*" title="Не менее двух букв. Можно использовать пробел и дефис, без цифр." required>
+                      </div>
+                      <div class="col-sm-6">
+                        <label for="name5" class="form-label">Имя *</label>
+                        <input id="name5" class="form-control" name="name" autocomplete="given-name" maxlength="60" placeholder="Ваше имя" minlength="2" pattern="\p{L}{2,}(?:[ \-]\p{L}+)*" title="Не менее двух букв. Можно использовать пробел и дефис, без цифр." required>
+                      </div>
+                      <div class="col-12">
+                        <label for="patronymic5" class="form-label">Отчество (при наличии)</label>
+                        <input id="patronymic5" class="form-control" name="patronymic" autocomplete="additional-name" maxlength="60" placeholder="Ваше отчество" minlength="2" pattern="\p{L}{2,}(?:[ \-]\p{L}+)*" title="Не менее двух букв, без цифр.">
+                      </div>
+                      <div class="col-sm-6">
+                        <label for="email5" class="form-label">Электронная почта *</label>
+                        <input id="email5" class="form-control" type="email" name="email" autocomplete="email" maxlength="100" placeholder="Ваша электронная почта" required>
+                      </div>
+                      <div class="col-sm-6">
+                        <label for="phone5" class="form-label">Телефон *</label>
+                        <input id="phone5" class="form-control" type="tel" name="phone" autocomplete="tel" placeholder="+7 (999) 123-45-67" pattern="[+0-9\s\(\)\-]{10,20}" required>
+                      </div>
+                    </div>
+                  </fieldset>
+                  <fieldset class="mb-4">
+                    <legend class="h5 mb-3">Участие в игре</legend>
+                    <div class="row g-3">
+                      <div class="col-sm-6">
+                        <label for="guests5" class="form-label">Количество игроков *</label>
+                        <input id="guests5" class="form-control" type="number" name="guests" min="1" max="2" value="1" required>
+                        <div class="form-text">Не более 2 чел.</div>
+                      </div>
+                      <div class="col-sm-6">
+                        <label for="experience5" class="form-label">Ваш опыт</label>
+                        <select id="experience5" class="form-select" name="experience">
+                          <option value="beginner">Играю впервые</option>
+                          <option value="some">Уже пробовал</option>
+                          <option value="regular">Играю регулярно</option>
+                        </select>
+                      </div>
+                      <div class="col-12">
+                        <label for="comment5" class="form-label">Комментарий</label>
+                        <textarea id="comment5" class="form-control" name="comment" rows="2" maxlength="500" placeholder="Например, играем впервые или придём компанией"></textarea>
+                      </div>
+                    </div>
+                  </fieldset>
+                  <div class="form-check mb-3">
+                    <input class="form-check-input" id="consent5" name="consent" value="yes" type="checkbox" required>
+                    <label class="form-check-label small" for="consent5">Согласен на обработку персональных данных для оформления записи. *</label>
+                  </div>
+                  <div class="form-check mb-4">
+                    <input class="form-check-input" id="newsletter5" name="newsletter" value="yes" type="checkbox">
+                    <label class="form-check-label small" for="newsletter5">Хочу получать новости клуба и расписание игр на почту.</label>
+                  </div>
+                  <p class="form-text">* Обязательные поля.</p>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer px-4">
+            <button class="btn btn-outline-light" type="button" data-bs-dismiss="modal">Отмена</button>
+            <button class="btn btn-danger" type="submit" form="bookingForm5">Подтвердить запись</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade booking-modal" id="booking6" tabindex="-1" aria-labelledby="bookingTitle6" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header px-4">
+            <h2 class="modal-title fs-5" id="bookingTitle6">Запись на игровой вечер</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+          </div>
+          <div class="modal-body p-4">
+            <div class="row g-4">
+              <div class="col-lg-4">
+                <div class="booking-summary p-3">
+                  <h3 class="h4 mb-3">Городская мафия</h3>
+                  <dl class="mb-3">
+                    <dt>Дата и время</dt><dd>1 ноября 2026 · 18:00</dd>
+                    <dt>Ведущий</dt><dd>Лис</dd>
+                    <dt>Место встречи</dt><dd>Зал «Полночь»<br>ул. Примерная, 10</dd>
+                    <dt>Свободные места</dt><dd class="mb-0">6</dd>
+                  </dl>
+                  <p class="price h3 mb-1">1 200 ₽</p>
+                  <p class="small text-body-secondary mb-0">За одного игрока · оплата на месте</p>
+                </div>
+              </div>
+              <div class="col-lg-8">
+                <form id="bookingForm6" action="schedule.html#booking-demo" method="get">
+                  <input type="hidden" name="game" value="6">
+                  <fieldset class="mb-4">
+                    <legend class="h5 mb-3">Контактные данные</legend>
+                    <div class="row g-3">
+                      <div class="col-sm-6">
+                        <label for="surname6" class="form-label">Фамилия *</label>
+                        <input id="surname6" class="form-control" name="surname" autocomplete="family-name" maxlength="60" placeholder="Ваша фамилия" minlength="2" pattern="\p{L}{2,}(?:[ \-]\p{L}+)*" title="Не менее двух букв. Можно использовать пробел и дефис, без цифр." required>
+                      </div>
+                      <div class="col-sm-6">
+                        <label for="name6" class="form-label">Имя *</label>
+                        <input id="name6" class="form-control" name="name" autocomplete="given-name" maxlength="60" placeholder="Ваше имя" minlength="2" pattern="\p{L}{2,}(?:[ \-]\p{L}+)*" title="Не менее двух букв. Можно использовать пробел и дефис, без цифр." required>
+                      </div>
+                      <div class="col-12">
+                        <label for="patronymic6" class="form-label">Отчество (при наличии)</label>
+                        <input id="patronymic6" class="form-control" name="patronymic" autocomplete="additional-name" maxlength="60" placeholder="Ваше отчество" minlength="2" pattern="\p{L}{2,}(?:[ \-]\p{L}+)*" title="Не менее двух букв, без цифр.">
+                      </div>
+                      <div class="col-sm-6">
+                        <label for="email6" class="form-label">Электронная почта *</label>
+                        <input id="email6" class="form-control" type="email" name="email" autocomplete="email" maxlength="100" placeholder="Ваша электронная почта" required>
+                      </div>
+                      <div class="col-sm-6">
+                        <label for="phone6" class="form-label">Телефон *</label>
+                        <input id="phone6" class="form-control" type="tel" name="phone" autocomplete="tel" placeholder="+7 (999) 123-45-67" pattern="[+0-9\s\(\)\-]{10,20}" required>
+                      </div>
+                    </div>
+                  </fieldset>
+                  <fieldset class="mb-4">
+                    <legend class="h5 mb-3">Участие в игре</legend>
+                    <div class="row g-3">
+                      <div class="col-sm-6">
+                        <label for="guests6" class="form-label">Количество игроков *</label>
+                        <input id="guests6" class="form-control" type="number" name="guests" min="1" max="6" value="1" required>
+                        <div class="form-text">Не более 6 чел.</div>
+                      </div>
+                      <div class="col-sm-6">
+                        <label for="experience6" class="form-label">Ваш опыт</label>
+                        <select id="experience6" class="form-select" name="experience">
+                          <option value="beginner">Играю впервые</option>
+                          <option value="some">Уже пробовал</option>
+                          <option value="regular">Играю регулярно</option>
+                        </select>
+                      </div>
+                      <div class="col-12">
+                        <label for="comment6" class="form-label">Комментарий</label>
+                        <textarea id="comment6" class="form-control" name="comment" rows="2" maxlength="500" placeholder="Например, играем впервые или придём компанией"></textarea>
+                      </div>
+                    </div>
+                  </fieldset>
+                  <div class="form-check mb-3">
+                    <input class="form-check-input" id="consent6" name="consent" value="yes" type="checkbox" required>
+                    <label class="form-check-label small" for="consent6">Согласен на обработку персональных данных для оформления записи. *</label>
+                  </div>
+                  <div class="form-check mb-4">
+                    <input class="form-check-input" id="newsletter6" name="newsletter" value="yes" type="checkbox">
+                    <label class="form-check-label small" for="newsletter6">Хочу получать новости клуба и расписание игр на почту.</label>
+                  </div>
+                  <p class="form-text">* Обязательные поля.</p>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer px-4">
+            <button class="btn btn-outline-light" type="button" data-bs-dismiss="modal">Отмена</button>
+            <button class="btn btn-danger" type="submit" form="bookingForm6">Подтвердить запись</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+    </script>
+  </body>
+</html>
