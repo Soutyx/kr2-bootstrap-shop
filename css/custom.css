@@ -7,10 +7,11 @@
 }
 
 body {
-  font-family: "Manrope", sans-serif;
-  min-height: 100vh;
+  font-family: "Golos Text", sans-serif;
+  min-height: 100svh;
   background: var(--club-bg);
   color: #fff;
+  --bs-danger-rgb: 219, 0, 52;
   --bs-secondary-color: #b4b4c0;
   --bs-link-color: #e6c86e;
   --bs-link-hover-color: #fff;
@@ -28,6 +29,46 @@ header, footer { background: #0a0a0f; }
   color: #fff;
 }
 .brand-mark { width: 44px; height: 44px; flex-shrink: 0; }
+
+/* Короткая заставка заката; не блокирует действия и прокрутку. */
+.sunset-intro { z-index: 2000; pointer-events: none; visibility: hidden; }
+.sunset-orb { width: 160px; height: 160px; top: 24%; }
+.sunset-horizon { height: 48%; }
+.sunset-title { font-size: clamp(1.6rem, 4.4vw, 3.8rem); }
+.sunset-playing .sunset-intro { animation: intro-out 2.8s linear both; }
+.sunset-playing .sunset-orb { animation: sun-down 1.4s ease-in both; }
+.sunset-playing .sunset-title { animation: section-reveal .7s ease-out .8s both; }
+@keyframes intro-out {
+  0%, 78% { opacity: 1; visibility: visible; }
+  100% { opacity: 0; visibility: hidden; }
+}
+@keyframes sun-down {
+  from { transform: translateY(0) scale(1); }
+  to { transform: translateY(36vh) scale(.85); }
+}
+
+/* Дополнения: сетка и компоненты остаются Bootstrap. */
+.feature-photo { height: auto; object-fit: contain; }
+.photo-open:focus-visible { outline: 3px solid var(--club-red); outline-offset: 4px; }
+.lightbox-photo { max-height: 75vh; object-fit: contain; }
+.reveal { animation: section-reveal .75s cubic-bezier(.2,.65,.3,1) var(--reveal-delay, 0ms) both; }
+@keyframes section-reveal {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    #evening .feature-photo {
+      animation: photo-drift linear both;
+      animation-timeline: view();
+      animation-range: entry 0% exit 100%;
+    }
+  }
+}
+@keyframes photo-drift {
+  from { transform: translateY(-12px); }
+  to { transform: translateY(12px); }
+}
 .navbar-brand:focus-visible { outline: 2px solid var(--club-red); outline-offset: 5px; border-radius: 2px; }
 @media (max-width: 575.98px) {
   .navbar-brand { font-size: .85rem; margin-right: .5rem; }
@@ -46,26 +87,9 @@ header, footer { background: #0a0a0f; }
   --bs-btn-active-border-color: #b3002d;
 }
 .text-danger { color: var(--club-red) !important; }
-.hero { min-height: 690px; }
-.hero-copy { max-width: 780px; }
-.hero h1 { position: relative; font-size: clamp(1.7rem, 4.4vw, 3.8rem); line-height: 1.2; letter-spacing: -.04em; }
-.hero-accent { color: #ff315f; }
-.hero-copy { position: relative; isolation: isolate; }
-.hero-copy::before {
-  content: "";
-  position: absolute;
-  inset: -55px -20px 15%;
-  z-index: -1;
-  pointer-events: none;
-  background: radial-gradient(ellipse, rgba(255, 0, 60, .2), transparent 68%);
-  filter: blur(22px);
-  animation: glow-in 1.4s ease-out both;
-}
-.hero .lead { max-width: 620px; margin-inline: auto; color: #c6c6d0; }
-.hero .container { z-index: 1; }
-.hero-mask { position: absolute; width: 33%; max-width: 500px; opacity: .5; pointer-events: none; }
-.mask-left { top: 0; left: -9%; transform: rotate(-18deg); }
-.mask-right { bottom: -4%; right: -9%; transform: rotate(16deg); }
+.hero { min-height: 580px; }
+.hero h1 { line-height: 1.2; letter-spacing: -.04em; }
+.hero .lead { color: #c6c6d0; }
 .section-space { padding-block: 64px; }
 .page-heading { padding: 80px 0 55px; }
 .card, .club-panel, .modal-content { background: var(--club-surface); }
@@ -73,7 +97,7 @@ header, footer { background: #0a0a0f; }
 .club-panel { border-radius: 12px; }
 .price, .stars { color: var(--club-gold); }
 .text-link { text-decoration: none; }
-.gallery-photo { height: 470px; object-fit: cover; }
+.gallery-photo { height: auto; aspect-ratio: 16 / 9; object-fit: contain; background: var(--club-surface); }
 .carousel-caption { bottom: 3rem; color: #fff; background: rgba(0, 0, 0, .8); padding: 12px; border-radius: 6px; }
 .carousel-caption p { margin: 0; }
 #clubGallery .carousel-control-prev-icon, #clubGallery .carousel-control-next-icon { filter: none; }
@@ -91,13 +115,13 @@ header, footer { background: #0a0a0f; }
 .carousel-indicators [data-bs-target] { background-color: #fff; }
 .accordion { --bs-accordion-bg: var(--club-surface); --bs-accordion-border-color: #2d2d36; --bs-accordion-active-bg: #261219; --bs-accordion-active-color: #fff; }
 .accordion-button { font-weight: 600; }
-.nav-pills { --bs-nav-pills-link-active-bg: var(--club-red); --bs-nav-link-color: #fff; --bs-nav-link-hover-color: #e6c86e; }
+.nav-pills { --bs-nav-pills-link-active-bg: #db0034; --bs-nav-link-color: #fff; --bs-nav-link-hover-color: #e6c86e; }
 .nav-pills .nav-link { background: var(--club-surface); }
-.nav-pills .nav-link.active { background: var(--club-red); }
+.nav-pills .nav-link.active { background: #db0034; }
 .table { --bs-table-bg: transparent; }
 footer a { text-decoration: none; }
-.demo-result { display: none; scroll-margin-top: 100px; }
-.demo-result:target { display: block; }
+.form-result { display: none; scroll-margin-top: 100px; }
+.form-result:target { display: block; }
 section[id] { scroll-margin-top: 90px; }
 
 /* Модальное окно записи */
@@ -109,9 +133,7 @@ section[id] { scroll-margin-top: 90px; }
 .booking-modal .modal-title { font-weight: 700; }
 
 /* Небольшие анимации без JavaScript */
-.hero-copy, .page-heading .container { animation: fade-up .6s ease-out both; }
-.hero-mask { animation: mask-float 7s ease-in-out infinite alternate; }
-.mask-right { animation-delay: -3s; }
+.page-heading .container { animation: fade-up .6s ease-out both; }
 .card { transition: transform .25s ease, background-color .25s ease; }
 .card:hover { transform: translateY(-4px); background-color: #191920; }
 .btn { transition: transform .2s ease, background-color .2s ease, border-color .2s ease; }
@@ -119,18 +141,9 @@ section[id] { scroll-margin-top: 90px; }
 .btn:active { transform: translateY(0); }
 .nav-link, footer a { transition: color .2s ease; }
 .gallery-photo { transition: transform .5s ease; }
-.carousel-item.active:hover .gallery-photo { transform: scale(1.02); }
 @keyframes fade-up {
   from { opacity: 0; transform: translateY(12px); }
   to { opacity: 1; transform: translateY(0); }
-}
-@keyframes glow-in {
-  from { opacity: 0; transform: scale(.85); }
-  to { opacity: 1; transform: scale(1); }
-}
-@keyframes mask-float {
-  from { translate: 0 0; }
-  to { translate: 0 -12px; }
 }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
@@ -139,12 +152,9 @@ section[id] { scroll-margin-top: 90px; }
 @media (max-width: 767.98px) {
   .container { padding-inline: 24px; }
   .hero { min-height: 580px; }
-  .hero-mask { width: 65%; opacity: .2; }
-  .mask-left { top: -6%; left: -28%; }
-  .mask-right { bottom: -5%; right: -28%; }
   .hero .lead { font-size: 1.05rem; }
   .section-space { padding-block: 40px; }
   .page-heading { padding: 48px 0 36px; }
-  .gallery-photo { height: 320px; }
   .carousel-caption p { font-size: 1rem; }
 }
+ч

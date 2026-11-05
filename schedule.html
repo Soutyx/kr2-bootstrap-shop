@@ -3,21 +3,19 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Тайный круг — учебный сайт клуба игры Мафия. Правила, отзывы, расписание и демонстрационная запись на игры.">
-    <title>
-      Расписание — Тайный круг
-    </title>
+    <meta name="description" content="Клуб мафии «Тайный круг» в Москве. Правила игры, отзывы участников, расписание вечеров и запись на игры.">
+    <title>Игры и отзывы — Тайный круг</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
-    <link href="css/custom.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+    <link href="css/custom.css?v=20261105-2" rel="stylesheet">
   </head>
   <body>
     <a class="visually-hidden-focusable btn btn-danger position-absolute" href="#main">
       Перейти к содержимому
     </a>
-    <header class="sticky-top">
+    <header class="sticky-top border-bottom border-danger border-3">
       <nav class="navbar navbar-expand-lg py-3" aria-label="Основная навигация">
         <div class="container">
           <a class="navbar-brand fw-bold" href="index.html">
@@ -36,20 +34,14 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link"  href="reviews.html">
-                  Отзывы
-                </a>
-              </li>
-              <li class="nav-item">
                 <a class="nav-link"  href="rules.html">
                   Правила
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="schedule.html">
-                  Расписание
-                </a>
+                <a class="nav-link active" aria-current="page" href="schedule.html">Игры и отзывы</a>
               </li>
+              <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
             </ul>
             <a class="btn btn-danger mt-3 mt-lg-0" href="schedule.html">
               Выбрать игру →
@@ -60,18 +52,18 @@
     </header>
     <main id="main">
       <section class="page-heading">
-        <div class="container">
+        <div class="container"><div class="row g-4 align-items-center"><div class="col-lg-6">
           <h1 class="display-4 fw-bold">
-            Выбери свой вечер
+            Игры и отзывы
           </h1>
           <p class="lead mt-4 mb-0">
-            Мафия, блеф и новые знакомства. Осталось выбрать дату.
+            Выбирай ближайшую игру, читай впечатления участников и делись своим вечером.
           </p>
-        </div>
+        </div><div class="col-lg-6"><img src="images/club-interior.png" class="img-fluid rounded w-100 feature-photo" width="1200" height="800" alt="Зал клуба перед началом игры" fetchpriority="high"></div></div></div>
       </section>
       <section class="pb-5">
         <div class="container">
-          <div id="booking-demo" class="alert alert-success demo-result mb-4" role="status">
+          <div id="booking-result" class="alert alert-success form-result mb-4" role="status">
             <h2 class="h5">
               Форма заполнена
             </h2>
@@ -82,6 +74,7 @@
           <p class="text-body-secondary">
             Игровые вечера: 8, 10 и 14 ноября 2026 года.
           </p>
+          <div class="d-flex flex-wrap gap-2 mb-4"><a href="#scheduleTabs" class="btn btn-danger">Выбрать дату</a><a href="#reviews" class="btn btn-outline-light">Отзывы игроков ↓</a></div>
           <ul class="nav nav-pills gap-2 mb-4" id="scheduleTabs" role="tablist">
             <li class="nav-item" role="presentation">
               <button class="nav-link active" id="november8-tab" data-bs-toggle="pill" data-bs-target="#november8" type="button" role="tab" aria-controls="november8" aria-selected="true">
@@ -373,13 +366,172 @@
           </div>
         </div>
       </section>
+
+
+      <section class="section-space" id="reviews">
+        <div class="container">
+          <h2 class="h3 mb-3">
+            Отзывы игроков
+          </h2>
+          <div class="row g-4">
+            <div class="col-md-4">
+              <article class="card h-100">
+                <div class="card-body p-4 d-flex flex-column">
+                  <p class="stars fs-5" aria-label="Оценка 5 из 5">
+                    ★★★★★
+                  </p>
+                  <blockquote class="mb-4">
+                    <p>
+                      Пришёл без опыта, но ведущий быстро объяснил правила. Уже ко второй партии начал замечать, кто путается в показаниях. Больше всего понравился разбор после игры.
+                    </p>
+                  </blockquote>
+                  <div class="mt-auto">
+                    <h3 class="h5 mb-1">
+                      Алексей
+                    </h3>
+                    <p class="text-body-secondary small mb-0">
+                      Первый вечер в клубе
+                    </p>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="col-md-4">
+              <article class="card h-100">
+                <div class="card-body p-4 d-flex flex-column">
+                  <p class="stars fs-5" aria-label="Оценка 5 из 5">
+                    ★★★★★
+                  </p>
+                  <blockquote class="mb-4">
+                    <p>
+                      Уютная атмосфера и интересные люди. Можно прийти одной и за вечер познакомиться со всей компанией. Ночная мафия особенно понравилась!
+                    </p>
+                  </blockquote>
+                  <div class="mt-auto">
+                    <h3 class="h5 mb-1">
+                      Мария
+                    </h3>
+                    <p class="text-body-secondary small mb-0">
+                      Играет по пятницам
+                    </p>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="col-md-4">
+              <article class="card h-100">
+                <div class="card-body p-4 d-flex flex-column">
+                  <p class="stars fs-5" aria-label="Оценка 5 из 5">
+                    ★★★★★
+                  </p>
+                  <blockquote class="mb-4">
+                    <p>
+                      Хороший реквизит и понятный регламент. За столом спорим до последнего, а после партии спокойно обсуждаем ошибки. Обязательно вернусь с друзьями.
+                    </p>
+                  </blockquote>
+                  <div class="mt-auto">
+                    <h3 class="h5 mb-1">
+                      Денис
+                    </h3>
+                    <p class="text-body-secondary small mb-0">
+                      Любит сложные партии
+                    </p>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section-space">
+        <div class="container">
+          <div class="row g-5">
+            <div class="col-lg-5">
+              <h2 class="display-6 fw-bold mb-4">
+                Как прошёл
+                <br>
+                твой вечер?
+              </h2>
+              <p class="lead">
+                Расскажи о своей партии.
+              </p>
+            </div>
+            <div class="col-lg-7">
+              <div class="club-panel p-4 p-md-5">
+                <div id="review-result" class="alert alert-success form-result" role="status">
+                  Спасибо, что поделились впечатлениями!
+                </div>
+                <form id="reviewForm" action="schedule.html#review-result" method="get">
+                  <div class="row g-3">
+                    <div class="col-md-7">
+                      <label class="form-label" for="reviewName">
+                        Ваше имя
+                      </label>
+                      <input class="form-control" id="reviewName" name="name" maxlength="50" autocomplete="given-name" minlength="2" pattern="\p{L}{2,}(?:[ \-]\p{L}+)*" title="Не менее двух букв. Можно использовать пробел и дефис, без цифр." required>
+                    </div>
+                    <div class="col-md-5">
+                      <label class="form-label" for="rating">
+                        Оценка
+                      </label>
+                      <select class="form-select" id="rating" name="rating" required>
+                        <option value="">
+                          Выберите оценку
+                        </option>
+                        <option value="5">
+                          5 — отлично
+                        </option>
+                        <option value="4">
+                          4 — хорошо
+                        </option>
+                        <option value="3">
+                          3 — нормально
+                        </option>
+                        <option value="2">
+                          2 — есть замечания
+                        </option>
+                        <option value="1">
+                          1 — не понравилось
+                        </option>
+                      </select>
+                    </div>
+                    <div class="col-12">
+                      <label class="form-label" for="reviewText">
+                        Ваш отзыв
+                      </label>
+                      <textarea class="form-control" id="reviewText" name="review" rows="5" minlength="10" maxlength="1500" placeholder="Что запомнилось больше всего?" required></textarea>
+                      <div class="form-text">
+                        От 10 до 1 500 символов.
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <div class="form-check">
+                        <input class="form-check-input" id="reviewConsent" type="checkbox" required>
+                        <label class="form-check-label small" for="reviewConsent">
+                          Согласен на обработку данных, указанных в отзыве.
+                        </label>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <button class="btn btn-danger" type="button" data-bs-toggle="modal" data-bs-target="#reviewConfirmation">
+                        Отправить отзыв
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
     </main>
     <footer class="py-5 mt-5">
       <div class="container">
         <div class="row g-4">
           <div class="col-lg-5">
-            <a class="h4 fw-bold text-decoration-none text-white" href="index.html">
-              ТАЙНЫЙ КРУГ.
+            <a class="h4 fw-bold text-decoration-none text-white d-inline-flex align-items-center gap-2" href="index.html">
+              <img src="images/logo.svg" width="44" height="44" alt="" aria-hidden="true">
+              <span>ТАЙНЫЙ КРУГ.</span>
             </a>
             <p class="text-body-secondary mt-3 mb-0">
               Город засыпает. Просыпается мафия.
@@ -398,43 +550,31 @@
                 </a>
               </li>
               <li class="mb-2">
-                <a href="reviews.html">
-                  Отзывы
-                </a>
-              </li>
-              <li class="mb-2">
                 <a href="rules.html">
                   Правила
                 </a>
               </li>
               <li class="mb-2">
-                <a href="schedule.html">
-                  Расписание
-                </a>
+                <a href="schedule.html">Игры и отзывы</a>
               </li>
+            <li class="mb-2"><a href="contacts.html">Контакты</a></li>
             </ul>
           </div>
           <div class="col-sm-6 col-lg-4">
-            <p class="fw-bold">
-              Контакты
-            </p>
-            <p>
-              Москва, ул. Примерная, 10
-              <br>
-              Ежедневно, 16:00–23:00
-            </p>
-            <a href="mailto:hello@secret-circle.example">
-              hello@secret-circle.example
-            </a>
-            <p class="mt-2 mb-0">
-              +7 (000) 000-00-00
-            </p>
+            <p class="fw-bold">Контакты</p>
+            <ul class="list-unstyled d-flex flex-column gap-3 mb-0">
+              <li class="d-flex align-items-start gap-2"><svg class="flex-shrink-0 mt-1 text-danger" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg><a class="text-white" href="contacts.html#location">Москва, ул. Примерная, 10</a></li>
+              <li class="d-flex align-items-start gap-2"><svg class="flex-shrink-0 mt-1 text-danger" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.8.7a2 2 0 0 1 1.8 2.1Z"/></svg><a href="tel:+74957284619">+7 (495) 728-46-19</a></li>
+              <li class="d-flex align-items-start gap-2"><svg class="flex-shrink-0 mt-1 text-danger" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Ежедневно, 16:00–23:00</span></li>
+              <li class="d-flex align-items-start gap-2"><svg class="flex-shrink-0 mt-1 text-danger" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><a class="text-break" href="mailto:hello@secret-circle.example">hello@secret-circle.example</a></li>
+            </ul>
           </div>
         </div>
-        <div class="d-flex flex-column flex-md-row justify-content-between gap-2 mt-5 text-body-secondary small">
-          <p class="mb-0">
-            © 2026 Руденко Егор ЭФБО11-25 · Все права защищены.
+        <div class="d-flex flex-column flex-md-row align-items-start align-items-md-center justify-content-between gap-3 mt-5">
+          <p class="mb-0 text-body-secondary small">
+            © 2026 Тайный круг (SecretCircle) · Все права защищены.
           </p>
+          <a class="btn btn-danger" href="schedule.html">Выбрать игру →</a>
         </div>
       </div>
     </footer>
@@ -461,7 +601,7 @@
                 </div>
               </div>
               <div class="col-lg-8">
-                <form id="bookingForm1" action="schedule.html#booking-demo" method="get">
+                <form id="bookingForm1" action="schedule.html#booking-result" method="get">
                   <input type="hidden" name="game" value="1">
                   <fieldset class="mb-4">
                     <legend class="h5 mb-3">Контактные данные</legend>
@@ -553,7 +693,7 @@
                 </div>
               </div>
               <div class="col-lg-8">
-                <form id="bookingForm2" action="schedule.html#booking-demo" method="get">
+                <form id="bookingForm2" action="schedule.html#booking-result" method="get">
                   <input type="hidden" name="game" value="2">
                   <fieldset class="mb-4">
                     <legend class="h5 mb-3">Контактные данные</legend>
@@ -645,7 +785,7 @@
                 </div>
               </div>
               <div class="col-lg-8">
-                <form id="bookingForm3" action="schedule.html#booking-demo" method="get">
+                <form id="bookingForm3" action="schedule.html#booking-result" method="get">
                   <input type="hidden" name="game" value="3">
                   <fieldset class="mb-4">
                     <legend class="h5 mb-3">Контактные данные</legend>
@@ -737,7 +877,7 @@
                 </div>
               </div>
               <div class="col-lg-8">
-                <form id="bookingForm4" action="schedule.html#booking-demo" method="get">
+                <form id="bookingForm4" action="schedule.html#booking-result" method="get">
                   <input type="hidden" name="game" value="4">
                   <fieldset class="mb-4">
                     <legend class="h5 mb-3">Контактные данные</legend>
@@ -829,7 +969,7 @@
                 </div>
               </div>
               <div class="col-lg-8">
-                <form id="bookingForm5" action="schedule.html#booking-demo" method="get">
+                <form id="bookingForm5" action="schedule.html#booking-result" method="get">
                   <input type="hidden" name="game" value="5">
                   <fieldset class="mb-4">
                     <legend class="h5 mb-3">Контактные данные</legend>
@@ -921,7 +1061,7 @@
                 </div>
               </div>
               <div class="col-lg-8">
-                <form id="bookingForm6" action="schedule.html#booking-demo" method="get">
+                <form id="bookingForm6" action="schedule.html#booking-result" method="get">
                   <input type="hidden" name="game" value="6">
                   <fieldset class="mb-4">
                     <legend class="h5 mb-3">Контактные данные</legend>
@@ -990,6 +1130,33 @@
         </div>
       </div>
     </div>
+    <div class="modal fade" id="reviewConfirmation" tabindex="-1" aria-labelledby="reviewConfirmationTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title fs-5" id="reviewConfirmationTitle">
+              Подтвердить отзыв?
+            </h2>
+            <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Закрыть">
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>
+              Всё верно? Проверьте имя, оценку и текст перед подтверждением.
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-outline-light" type="button" data-bs-dismiss="modal">
+              Вернуться к форме
+            </button>
+            <button class="btn btn-danger" type="submit" form="reviewForm" data-bs-dismiss="modal">
+              Подтвердить
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
     </script>
   </body>
