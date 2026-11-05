@@ -19,7 +19,20 @@ body {
 }
 
 header, footer { background: #0a0a0f; }
-.navbar-brand { font-size: 1.15rem; }
+.navbar-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: .6rem;
+  font-size: 1.05rem;
+  letter-spacing: .02em;
+  color: #fff;
+}
+.brand-mark { width: 44px; height: 44px; flex-shrink: 0; }
+.navbar-brand:focus-visible { outline: 2px solid var(--club-red); outline-offset: 5px; border-radius: 2px; }
+@media (max-width: 575.98px) {
+  .navbar-brand { font-size: .85rem; margin-right: .5rem; }
+  .brand-mark { width: 38px; height: 38px; }
+}
 .navbar .nav-link.active { color: #fff; }
 .navbar .nav-link { color: #b4b4c0; }
 .navbar .nav-link:hover { color: #fff; }
